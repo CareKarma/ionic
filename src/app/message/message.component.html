@@ -1,31 +1,25 @@
-<ion-item
-  *ngIf="message"
-  [routerLink]="'/message/' + message.id"
-  [detail]="false"
->
-  <div slot="start" [class]="!message.read ? 'dot dot-unread' : 'dot'"></div>
+<ion-item *ngIf="message" [routerLink]="'/message/' + message.id" [detail]="false">
+  <div style="width: 280px; height: 380px;">
+    <ion-img *ngIf="message.id == 0" src="assets/img/jojo.jpg"></ion-img>
+    <ion-img *ngIf="message.id == 1" src="assets/img/op.jpg"></ion-img>
+    <ion-img *ngIf="message.id == 2" src="assets/img/dbz.jpg"></ion-img>
+    <ion-img *ngIf="message.id == 3" src="assets/img/erased.jpg"></ion-img>
+    <ion-img *ngIf="message.id == 4" src="assets/img/aot.jpg"></ion-img>
+    <ion-img *ngIf="message.id == 5" src="assets/img/naruto.jpg"></ion-img>
+    <ion-img *ngIf="message.id == 6" src="assets/img/fate.jpg"></ion-img>
+    <ion-img *ngIf="message.id == 7" src="assets/img/pokemon.jpg"></ion-img>
+    <ion-img *ngIf="message.id == 8" src="assets/img/zoids.jpg"></ion-img>
+  </div>
   <ion-label class="ion-text-wrap">
     <h2>
-      {{ message.fromName }}
+      {{ message.animeName }}
       <span class="date">
-        <ion-note>{{ message.date }}</ion-note>
-        <ion-icon
-          aria-hidden="true"
-          name="chevron-forward"
-          size="small"
-          *ngIf="isIos()"
-        ></ion-icon>
+        <!-- <ion-note>{{ message.date }}</ion-note> -->
+        <ion-icon aria-hidden="true" name="chevron-forward" size="small" *ngIf="isIos()"></ion-icon>
       </span>
     </h2>
-    <h3>{{ message.subject }}</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </p>
+    <h3>{{ message.descripcion }}</h3>
   </ion-label>
+ 
 </ion-item>
+<ion-checkbox><h3>Visto?</h3></ion-checkbox>

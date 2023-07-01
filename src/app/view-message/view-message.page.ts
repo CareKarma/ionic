@@ -3,6 +3,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IonicModule, Platform } from '@ionic/angular';
 import { DataService, Message } from '../services/data.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-view-message',
@@ -16,8 +17,11 @@ export class ViewMessagePage implements OnInit {
   private data = inject(DataService);
   private activatedRoute = inject(ActivatedRoute);
   private platform = inject(Platform);
+  // public vid = 'https://youtu.be/etDxw9C3t-w'
 
-  constructor() {}
+  constructor(
+    private dom: DomSanitizer
+  ) {}
 
   ngOnInit() {
     const id = this.activatedRoute.snapshot.paramMap.get('id') as string;
@@ -27,5 +31,9 @@ export class ViewMessagePage implements OnInit {
   getBackButtonText() {
     const isIos = this.platform.is('ios')
     return isIos ? 'Inbox' : '';
+  }
+
+  pass(vid: string) {
+    return this.dom.bypassSecurityTrustResourceUrl(vid);
   }
 }

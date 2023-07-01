@@ -11,32 +11,51 @@
 
 <ion-content [fullscreen]="true" *ngIf="message">
   <ion-item>
-    <ion-icon
+    <!-- <ion-icon
       aria-hidden="true"
       name="person-circle"
       color="primary"
-    ></ion-icon>
+    ></ion-icon> -->
     <ion-label class="ion-text-wrap">
       <h2>
-        {{ message.fromName }}
+        {{ message.animeName }}
         <span class="date">
-          <ion-note>{{ message.date }}</ion-note>
+          <!-- <ion-note>{{ message.date }}</ion-note> -->
         </span>
       </h2>
-      <h3>To: <ion-note>Me</ion-note></h3>
+      <!-- <h3>To: <ion-note>Me</ion-note></h3> -->
     </ion-label>
   </ion-item>
 
   <div class="ion-padding">
-    <h1>{{ message.subject }}</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </p>
+    <h1>{{ message.descripcion }}</h1>
+    <div *ngIf="message.id == 0" style="text-align: center;">
+      <iframe width="1127" height="480" src="https://www.youtube.com/embed/etDxw9C3t-w" title="Jojo&#39;s Bizarre Adventure Golden Wind Opening 2 GER Version (Final Version) |720p HD|" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div *ngIf="message.id == 1" style="text-align: center;">
+      <iframe width="1127" height="480" src="https://www.youtube.com/embed/Tyr7Ymbtl2Y" title="One Piece OP 6 - BRAND NEW WORLD (720p HD)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div *ngIf="message.id == 2" style="text-align: center;">
+      <iframe width="1127" height="480" src="https://www.youtube.com/embed/cie7scVUdQE" title="Dragon Ball Z - Chala Head Chala (opening Latino) Full HD 1080p" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div *ngIf="message.id == 3" style="text-align: center;">
+      <iframe width="1122" height="480" src="https://www.youtube.com/embed/fodAJ-1dN3I" title="Boku Dake Ga Inai Machi Opening" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div *ngIf="message.id == 4" style="text-align: center;">
+      <iframe width="1122" height="480" src="https://www.youtube.com/embed/9l9Wa-5ph6o" title="L&#39;Attaque des Titans Saison Finale - Opening 2 | The Rumbling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div *ngIf="message.id == 5" style="text-align: center;">
+      <iframe width="1122" height="480" src="https://www.youtube.com/embed/zVgKnfN9i34" title="Naruto Shippuden - Opening 16 | Silhouette" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div *ngIf="message.id == 6" style="text-align: center;">
+      <iframe width="1122" height="480" src="https://www.youtube.com/embed/QUXKOyAS4pc" title="Fate Stay Night Unlimited Blade Works Op 2 4K60" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div *ngIf="message.id == 7" style="text-align: center;">
+      <iframe width="1122" height="480" src="https://www.youtube.com/embed/1oPdtWTpdzU" title="Pokemon Opening 1 Latino (Remasterizado Digital)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div *ngIf="message.id == 8" style="text-align: center;">
+      <iframe width="1122" height="480" src="https://www.youtube.com/embed/QkcuDqirly4" title="Zoids Opening 1 Latino (Remasterizado Digital)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    
   </div>
 </ion-content>
